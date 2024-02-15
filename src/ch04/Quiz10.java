@@ -40,8 +40,8 @@ public class Quiz10 {
         System.out.println("프로그램 종료");
         */
 
-        boolean run = true;
-        int balance = 0;
+        boolean run = true; // 실행상태 <- 플래그 변수
+        int balance = 0;    // 통장 잔고
 
         while (run) {
             System.out.println("--------------------------------");
@@ -49,12 +49,12 @@ public class Quiz10 {
             System.out.println("--------------------------------");
             System.out.print("선택> ");
 
-            int menuNum = scanner.nextInt();
+            int menuNum = scanner.nextInt(); // int타입으로 받는다.
 
             switch (menuNum) {
                 case 1:
                     System.out.print("예금액 > ");
-                    balance += scanner.nextInt();
+                    balance += scanner.nextInt(); // 통장 잔고에 기존에 예금했던 돈을 유지하기 위해 누적 합산
                     break;
                 case 2:
                     System.out.print("출금액 > ");
