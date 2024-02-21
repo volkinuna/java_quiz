@@ -100,10 +100,16 @@ public class CustomerApplication {
             System.out.println("전체 포인트가 500점 이상일 경우만 사용 가능합니다.");
             System.out.println("현재 " + customer.getTotalPoint() + " 포인트입니다.");
             return;
+        } else if (point > customer.getTotalPoint()) {
+            System.out.println("사용 가능한 포인트가 초과되었습니다.");
+            System.out.println("현재 사용 가능한 포인트는 " + customer.getTotalPoint() + "점입니다.");
+            return;
         } else {
             customer.setTotalPoint(customer.getTotalPoint() - point);
             System.out.println(point + " 포인트가 사용되었습니다.");
-        }
+            System.out.println("남은 포인트는 " + customer.getTotalPoint() + "점입니다.");
+            return;
+                    }
     }
 
     private static void pointSave() {
@@ -126,9 +132,13 @@ public class CustomerApplication {
             customer.setTotalPoint(customer.getTotalPoint() + point + addPoint);
             System.out.println(point + " 포인트가 적립되었습니다.");
             System.out.println("적립한 포인트의 10%인 " + addPoint + " 포인트가 추가 적립되었습니다.");
+            System.out.println("현재 전체 포인트는 " + customer.getTotalPoint() + "점입니다.");
+            return;
         } else {
             customer.setTotalPoint(customer.getTotalPoint() + point);
             System.out.println(point + " 포인트가 적립되었습니다.");
+            System.out.println("현재 전체 포인트는 " + customer.getTotalPoint() + "점입니다.");
+            return;
         }
     }
 
