@@ -1,7 +1,5 @@
 package ch06.quiz23;
 
-import java.util.Scanner;
-
 public class Account {
     /*
     다음은 키보드로부터 계좌 정보를 입력받아 계좌를 관리하는 프로그램입니다. 계좌는Account
@@ -10,46 +8,38 @@ public class Account {
     의 nextLine ( ) 메소드를 사용).
     */
 
-    Scanner scanner = new Scanner(System.in);
+    private String ano;   // 계좌번호
+    private String owner; // 계좌주
+    private int balence;  // 잔고
 
-    String accNum[];
-    String accName[];
-    int balence;
-    boolean run = true;
-
-    void acc() {
-        System.out.println("--------");
-        System.out.println("계좌생성");
-        System.out.println("--------");
-        System.out.print("계좌번호 : ");
-        //this.accNum[] = scanner.nextLine();
-        System.out.print("계좌주 : ");
-        String accName = scanner.nextLine();
-        System.out.print("초기입금액 : ");
-        int balence = scanner.nextInt();
-        System.out.println("결과 : 계좌가 생성되었습니다.");
+    public Account(String ano, String owner, int balence) {
+        this.ano = ano;
+        this.owner = owner;
+        this.balence = balence;
     }
 
-    void accList() {
-        System.out.println("--------");
-        System.out.println("계좌목록");
-        System.out.println("--------");
+    public String getAno() {
+        return ano;
     }
 
-    void plus() {
-        System.out.println("--------");
-        System.out.println("예금");
-        System.out.println("--------");
-        System.out.print("계좌번호 : ");
-        System.out.print("예금액 : ");
+    public void setAno(String ano) {
+        this.ano = ano;
     }
 
-    void minus() {
-        System.out.println("--------");
-        System.out.println("출금");
-        System.out.println("--------");
-        System.out.print("계좌번호 : ");
-        System.out.print("출금액 : ");
-        System.out.print("결과 : 출금이 성공되었습니다.");
+    public String getOwner() {
+        return owner;
     }
+
+    public void setOwner(String owner) {
+        this.owner = owner;
+    }
+
+    public int getBalence() {
+        return balence;
+    }
+
+    public void setBalence(int balence) {
+        this.balence = balence;
+    }
+
 }
