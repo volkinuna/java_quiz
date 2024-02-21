@@ -51,9 +51,9 @@ public class CustomerApplication {
         System.out.print("집 주소 : ");
         String address = scanner.next();
         System.out.print("포인트 : ");
-        int point = scanner.nextInt();
+        int totalPoint = scanner.nextInt();
 
-        Customer newCustomer = new Customer(client, phone, address, point);
+        Customer newCustomer = new Customer(client, phone, address, totalPoint);
 
         for (int i = 0; i < customerArray.length; i++) {
 
