@@ -4,6 +4,8 @@ public class Child extends Parent {
 
     public int studentNo;
 
+    // 부모 생성자를 올바르게 호출하지 않았다.
+
     //    public Child(String name, int studentNo) {
     //        this.name = name;
     //        this.studentNo = studentNo;
